@@ -21,17 +21,19 @@ namespace MoccaMaster
 
         #endregion
 
+        //Method to start the brewing
         #region Methods
         public void BrewStart()
         {
-            Console.WriteLine("The coffeemachine is now brewing");
+            Console.WriteLine("The Moccamaster multibrewer is now brewing");
+            Console.WriteLine();
             for (int i = 0; i < 20; i++)
             {
-                Console.Write(" Blob ");
-                Thread.Sleep(250);
+                Console.Write(" Blob ");//Blobbing 20 times
+                Thread.Sleep(250);///Pausing the thread.
             }
             Console.WriteLine();
-            Console.WriteLine("Concratulation. You now have the best cup of coffee in the world. Enjoy");
+            Console.WriteLine("Concratulation. Your drink is now ready. Enjoy");
         }
         #endregion
     }

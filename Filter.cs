@@ -19,26 +19,15 @@ namespace MoccaMaster
         #region Constructors
 
         #endregion
-
+        //Method to insert filter into the machine
         #region Methods
         public void InsertFilter()
         {
-            Console.WriteLine("Press: 1 to insert filter");
-            char input = Console.ReadKey(false).KeyChar;
+            Console.WriteLine("Press any key to insert filter");
+            Console.ReadKey(true);
             Console.WriteLine();
-            try
-            {
-
-                if (input == '1')
-                {
-                    Console.WriteLine("You have added a filter");
-                }
-            }
-            catch (Exception)
-            {
-
-                Console.WriteLine("You need to press 1");
-            }
+            Console.WriteLine("You have added a filter");
+            Console.WriteLine();
         }
         #endregion
     }

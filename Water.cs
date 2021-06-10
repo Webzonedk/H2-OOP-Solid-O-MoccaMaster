@@ -42,19 +42,19 @@ namespace MoccaMaster
         public void AddWater()
         {
             Console.WriteLine("Please add how many cups of water to use. Only whole numbers can be used");
-            string amount = (Console.ReadLine());
+            string amount = (Console.ReadLine());//Receive input from user
 
             try
             {
-            Amount = Convert.ToInt32(amount);
+            Amount = Convert.ToInt32(amount);//Adding the input to the attribute
 
             }
             catch (Exception)
             {
                 Console.WriteLine("The input supplied was not a valid number.");
             }
-            Console.WriteLine("You have added " + Amount + " cups of water");
-
+            Console.WriteLine("You have added " + Amount + " cups of water");//Return output to console
+            Console.WriteLine();
         }
         #endregion
     }

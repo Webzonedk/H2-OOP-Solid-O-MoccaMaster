@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 namespace MoccaMaster
 {
     //A class to make a method to open/close filterfunnel
-    public enum OpenClose { opened, closed }
+    public enum OpenClose { opened, closed }//Enum to apply values to the openclose switch
     public class FilterFunnel
     {
         #region Fields
         private OpenClose openCloseStatus;
         #endregion
 
-        #region Properties
 
+
+        #region Properties
         public OpenClose OpenCloseStatus
         {
             get { return openCloseStatus; }
@@ -24,6 +25,8 @@ namespace MoccaMaster
 
         #endregion
 
+
+
         #region Constructors
         public FilterFunnel(OpenClose openCloseStatus)
         {
@@ -31,22 +34,26 @@ namespace MoccaMaster
         }
         #endregion
 
+
+        //Method to open or close the filter funnel
         #region Methods
         public void OpenCloseFilterFunnel()
         {
             switch (OpenCloseStatus)
             {
-                case OpenClose.opened:
+                case OpenClose.opened://If filter funnel is open
                     Console.WriteLine("Press any key to close the filter Funnel");
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                     Console.WriteLine("You have closed the Filter Funnel");
-                    openCloseStatus = OpenClose.closed;
+                    openCloseStatus = OpenClose.closed;//Changing the filter funnel status to closed
+                    Console.WriteLine();
                     break;
-                case OpenClose.closed:
+                case OpenClose.closed://If filter funnel is closed
                     Console.WriteLine("Press any key to open the filter Funnel");
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                     Console.WriteLine("You have opened the Filter Funnel");
-                    openCloseStatus = OpenClose.opened;
+                    openCloseStatus = OpenClose.opened;//Changing the filter funnel status to open
+                    Console.WriteLine();
                     break;
                 default:
                     break;

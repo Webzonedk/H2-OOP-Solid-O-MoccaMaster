@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//This class is made to be able to create new coffebeans of different types
+//A Class to select and add Tea types
 namespace MoccaMaster
 {
-    public class CoffeeBean : IBrewType // implementet in the IBrewType interface
+    public class TeaLeaf: IBrewType // implementet in the IBrewType interface
     {
+
         #region Fields
         private string type;
 
         #endregion
+
+
 
         #region Properties
         public string Type
@@ -22,19 +25,23 @@ namespace MoccaMaster
 
         #endregion
 
+
+
         #region Constructors
-        public CoffeeBean(string type)
+        public TeaLeaf(string type)
         {
             this.type = type;
         }
 
-        public CoffeeBean()
+        public TeaLeaf()
         {
 
         }
 
         #endregion
-        //Method to select coffee type add coffee beans to the machine
+
+
+        //Method to add tea leafs to the machine
         #region Methods
         public void Add()
         {
@@ -42,25 +49,26 @@ namespace MoccaMaster
             while (run)
             {
 
-                Console.WriteLine("Which kind of beans would you like? Please Chose: || 1: Arabika coffee || 2: Robusta coffe || 3: Liberica coffe ||");
-                char input = Console.ReadKey(false).KeyChar;//Receiving the input
+                Console.WriteLine("Which kind of Tea would you like? Please Chose: || 1: Forest Fruit || 2: Earl Gray || 3: Citrus ||");
+                char input = Console.ReadKey(false).KeyChar;//Receive input
                 Console.WriteLine();
                 try
                 {
-                    switch (input)//Switch to decide what to return to console, and adding the type to the attribute
+                    switch (input)//Chose output dependant of the input
                     {
                         case '1':
-                            Type = "Arabika coffee";
+                            Type = "Forest Fruit";
                             Console.WriteLine("You have choosen " + Type);
                             run = false;
                             break;
                         case '2':
-                            Type = "Robusta coffee";
+                            Type = "Earl Gray";
                             Console.WriteLine("You have choosen " + Type);
                             run = false;
+
                             break;
                         case '3':
-                            Type = "Liberica coffee";
+                            Type = "Citrus";
                             Console.WriteLine("You have choosen " + Type);
                             run = false;
                             break;
